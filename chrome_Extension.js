@@ -3,6 +3,7 @@ const inputEl=document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl=document.getElementById("ul-el")
 const deleteBtn=document.getElementById("delete-btn")
+const tabBtn= document.getElementById("tab-btn")
 
 //stringify() takes a JavaScript object and then transforms it into a JSON string. JSON. parse() takes a JSON string and then transforms it into a JavaScript object.
 
@@ -11,6 +12,17 @@ if(leadsFromLocalStorage){
   myLeads=leadsFromLocalStorage
    render(myLeads)
 }
+// const tabs =[
+//   {url:"http://www.linkedin.com/in/per-harald-borgen/"}hard coded things..we just need to grab the tab instead of hardcoding
+// ]
+tabBtn.addEventListener("click",function(){
+  // console.log(tabs[0].url)
+  chrome.tabs.query({active:true,currentWindow:true},function(tabs){
+  myLeads.push(tabs[0].url)
+  localStorage.setItem("myLeads",JSON.stringify(myLeads))
+  render(myLeads)
+})
+})
 //need to clear localstorage,DOM,and the myLeads by the user double clicked the button
 deleteBtn.addEventListener("dblclick",function(){
   localStorage.clear()

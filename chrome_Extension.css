@@ -8,28 +8,28 @@ input{
     width: 100%;
     padding:10px;
     box-sizing: border-box;
-    color: #5f9341;
-    border: 1px solid #5f9341;
+    color: #a871e6e5;
+    border: 1px solid  #a871e6e5;;
     margin-bottom: 4px;
 }
 button{
     color: white;
-    background-color: #5f9341;
+    background-color:  #a871e6e5;
    
     padding: 10px 20px;
-    border:1px solid #5f9341;
+    border:1px solid #a871e6e5;
     border: none;
     font-weight: bold;
 }
 #input-btn{
-    border:1px solid #5f9341;
+    border:1px solid  #a871e6e5;
 
 }
 
 #delete-btn{
-    color: #5f9341;
+    color:  #a871e6e5;
     background-color: white;
-    border:1px solid #5f9341;
+    border:1px solid #a871e6e5;
 
 
 }
@@ -42,6 +42,6 @@ li{
   margin-top: 5px;
 }
 a{
-    color: #5f9341;
+    color:  #a871e6e5;
     text-decoration: none;
 }
